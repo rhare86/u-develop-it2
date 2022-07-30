@@ -21,6 +21,10 @@ const db = mysql.createConnection(
 );
 
 
+db.query(`SELECT * FROM candidates`, (err, rows) => {
+    console.log(rows);
+});
+
 
 // Default response for any other request (Not Found)
 app.use((req, res) => {
